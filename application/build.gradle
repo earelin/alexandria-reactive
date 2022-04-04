@@ -1,0 +1,27 @@
+plugins {
+    id 'alexandria.java'
+}
+
+dependencies {
+    implementation project(':domain')
+    implementation project(':infrastructure')
+
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springframework.data:spring-data-commons'
+
+    implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+    testImplementation 'io.rest-assured:spring-mock-mvc:4.5.1'
+
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
+}
+
+bootJar {
+    enabled = true
+}

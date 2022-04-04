@@ -1,0 +1,20 @@
+plugins {
+    id 'alexandria.java'
+}
+
+dependencies {
+    implementation project(':domain')
+
+    implementation 'commons-io:commons-io:2.11.0'
+
+    implementation 'com.fasterxml.jackson.core:jackson-core'
+    implementation 'com.fasterxml.jackson.core:jackson-databind'
+
+    implementation 'org.springframework:spring-context'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.data:spring-data-commons'
+
+    spotbugs 'com.github.spotbugs:spotbugs:4.5.3'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
